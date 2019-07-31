@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+
+body, html{
+    height: 100%;
+    margin:0;
+    font-size:16px;
+    font-family:"Lato", sans-serif;
+    font-weight:400;
+    line-height:1.8em;
+    color:#665;
+}
+
+header#cabecalho{
+    background-color: rgb(70, 159, 218);
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+}
+
+header#logo{
+    margin-top: 50px;
+    display: inline-block;
+}
+
+nav#menu{
+    display: inline-block;
+    overflow: hidden;
+}
+
+nav#menu ul{
+    position: absolute;
+    list-style-type: none;
+    top: 10px;
+    float: left;
+}
+nav#menu li{
+    float: left;
+    margin: 0px;
+}
+nav#menu a{
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+
+}
+
+nav#menu a:hover{
+    background: #808080;
+}
+
+.pimg1, .pimg2, .pimg3 {
+    position:relative;
+    opacity:0.70;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    /*
+        fixed = parallax
+        scroll = normal
+    */
+    background-attachment:fixed;
+}
+
+.pimg1{
+    background-image:url(../img/img04.jpeg);
+    min-height:100%;
+}
+.pimg2{
+    background-image:url(../img/img08.jpeg);
+    min-height:400px;
+}
+.pimg3{
+    background-image:url(../img/img07.jpeg);
+    min-height:400px;
+}
+
+.section{
+    text-align:center;
+    padding:100px 80px;
+    position: relative;
+}
+
+p{
+    text-align: justify;
+    text-indent: 40px
+}
+
+.section-light{
+    background-color:#fff;
+    color:#665;
+}
+.section-dark{
+    background-color:#282e34;
+    color:#ddd;
+}
+.divisao{
+    width: 50%;
+    display: inline-block;
+    box-sizing:border-box;
+    position: relative; 
+    padding: 10px;
+}
+
+.box-left{
+    float: left;
+}
+
+.box-right{
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ptext{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:27px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+}
+
+.ptext .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px;
+}
+
+.text-titulo{
+    background-color: transparent;
+    color:#fff;
+}
+
+.ptext .border.trans{
+    background-color:transparent;
+}
+
+@media(max-width:568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
+
+footer{
+    background-color: rgb(70, 159, 218);
+    padding-top: 75px;
+    text-align: center;
+    height: 25%;
+}
+
+
